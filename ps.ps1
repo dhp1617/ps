@@ -1,0 +1,13 @@
+write-output "System Health Check V1.9 (local computer) by J.Fleschutz / fleschutz@gmail.com"
+write-output " "
+write-output "STEP 1: Hardware check..."
+& "$PSScriptRoot/check-hardware.ps1"
+write-output " "
+write-output "STEP 2: Software check..."
+& "$PSScriptRoot/check-software.ps1"
+write-output " "
+write-output "STEP 3: Network check..."
+& "$PSScriptRoot/check-network.ps1"
+write-output " "
+write-output "System health check finished."
+exit 0 # success
