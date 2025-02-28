@@ -1,13 +1,4 @@
-write-output "System Health Check V1.9 (local computer) by J.Fleschutz / fleschutz@gmail.com"
-write-output " "
-write-output "STEP 1: Hardware check..."
-& "$PSScriptRoot/check-hardware.ps1"
-write-output " "
-write-output "STEP 2: Software check..."
-& "$PSScriptRoot/check-software.ps1"
-write-output " "
-write-output "STEP 3: Network check..."
-& "$PSScriptRoot/check-network.ps1"
-write-output " "
-write-output "System health check finished."
-exit 0 # success
+# Hypothetical ps.ps1 content
+Write-Output "Running custom PowerShell script..."
+Get-Process | Where-Object { $_.CPU -gt 100 } | Format-Table Name, CPU
+Write-Output "Script complete."
